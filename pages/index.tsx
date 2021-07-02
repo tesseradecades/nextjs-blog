@@ -6,14 +6,16 @@ import Link from 'next/link'
 import Date from '../components/date'
 import { GetStaticProps } from 'next'
 
+type IAllPostsData = {
+  date: string
+  title: string
+  id: string
+}[]
+
 export default function Home({
   allPostsData
 }: {
-  allPostsData: {
-    date: string
-    title: string
-    id: string
-  }[]
+  allPostsData: IAllPostsData
 }) {
   return (
     <Layout home>

@@ -7,13 +7,15 @@ import Link from 'next/link'
 const name = '[Your Name]'
 export const siteTitle = 'Next.js Sample Website'
 
+type ILayoutProps = {
+  children: React.ReactNode
+  home?: boolean
+}
+
 export default function Layout({
   children,
   home
-}: {
-  children: React.ReactNode
-  home?: boolean
-}) {
+}: ILayoutProps) {
   return (
     <div className={styles.container}>
       <Head>
